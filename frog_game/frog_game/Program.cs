@@ -16,6 +16,7 @@ namespace Little_Frog
             ConsoleKeyInfo cki;
             int counter = 0, level = 1, score = 0, life = 1; //require elements
             string direction = "";
+            int car_type2 = 2, car_type_1 = 10;
 
 
             while (true)
