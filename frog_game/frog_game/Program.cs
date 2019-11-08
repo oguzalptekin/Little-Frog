@@ -130,6 +130,11 @@ namespace Little_Frog
                     if (cki.Key == ConsoleKey.Escape)
                         break;
 
+                    while (Console.KeyAvailable)
+                    {
+                        cki = Console.ReadKey();
+                    }
+
 
                 }
                 Thread.Sleep(500);
