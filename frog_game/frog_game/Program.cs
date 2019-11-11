@@ -17,7 +17,9 @@ namespace Little_Frog
             int counter = 0, level = 1, score = 0, life = 1; //require elements
             string direction = "";
             int car_type2 = 2, car_type_1 = 10;
-
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
 
             while (true)
             {
@@ -88,7 +90,7 @@ namespace Little_Frog
 
 
                 Console.SetCursorPosition(frogx, frogy);
-                Console.WriteLine("F");
+                Console.WriteLine("(°_°)");
                 if (Console.KeyAvailable)
                 {
                     cki = Console.ReadKey(true);
@@ -135,14 +137,11 @@ namespace Little_Frog
                     {
                         cki = Console.ReadKey();
                     }
-
-
                 }
-                Thread.Sleep(500);
-
-
+                Thread.Sleep(150);
             }
             Console.ReadLine();
+            
         }
     }
 }
