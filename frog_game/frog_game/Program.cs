@@ -26,6 +26,12 @@ namespace Little_Frog
             int carcounter;
 
 
+            //For determining car places on the road
+            for (int i = 0; i <= 5; i++)
+            {
+                carPlace[i] = rnd.Next(section[i], section[i + 1]);
+            }
+
             while (true)
             {
                 Console.SetCursorPosition(1, 1);
