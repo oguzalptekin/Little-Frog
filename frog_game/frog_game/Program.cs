@@ -61,14 +61,15 @@ namespace Little_Frog
                 carcounter = 0;
                 for(int i = 0; i <= 49; i++)
                 {
-                    if (line1[i] == "1")
+                    if (line1[i] == "1" && line1[i+1] == "1")
                     {
-                        carcounter++;
+                        carcounter--;
+                    }
+                    else if (line1[i] == "1" && line1[i + 1] == "-")
+                    {
+                        carcounter += 2;
                     }
                 }
-
-
-
 
 
                 Thread.Sleep(500);
