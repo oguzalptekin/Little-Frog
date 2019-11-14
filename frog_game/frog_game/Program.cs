@@ -86,7 +86,7 @@ namespace Little_Frog
                     cursorx = cursorx + 2;
                 }
 
-
+                //Frog Movement
                 Console.SetCursorPosition(frogx, frogy);
                 Console.WriteLine("F");
                 if (Console.KeyAvailable)
