@@ -16,7 +16,7 @@ namespace Little_Frog
             int[] section = new int[7] { 0, 8, 17, 25, 34, 42, 50 };
             int[] carPlace = new int[6];
             bool carcoming = false;
-            //string deleteThis;
+            Console.CursorVisible = false;
 
             //For determining car places on the road
             for (int i = 0; i <= 5; i++)
@@ -53,19 +53,16 @@ namespace Little_Frog
                 Console.Clear();
                 for (int i = 0; i <= 49; i++)
                 {
-                    if (i == 0)
-                    {
-                        //deleteThis = line1[50];
-                        line1[50] = line1[i];
-                        //line1[i] = deleteThis; //ilk baştaki değere göre sürekli 1 veya - üretilmesine neden oluyor!
-                        line1[i] = line1[i + 1];
-                    }
-                    else
-                    {
-                        line1[i] = line1[i + 1];
-                    }
+                    line1[i] = line1[i + 1];
                     Console.Write(line1[i]);
                 }
+
+
+
+
+
+
+
                 Thread.Sleep(500);
             }
 
