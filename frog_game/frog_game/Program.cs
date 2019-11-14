@@ -17,6 +17,7 @@ namespace Little_Frog
             int[] carPlace = new int[6];
             bool carcoming = false;
             Console.CursorVisible = false;
+            int carcounter;
 
             //For determining car places on the road
             for (int i = 0; i <= 5; i++)
@@ -57,7 +58,14 @@ namespace Little_Frog
                     Console.Write(line1[i]);
                 }
 
-
+                carcounter = 0;
+                for(int i = 0; i <= 49; i++)
+                {
+                    if (line1[i] == "1")
+                    {
+                        carcounter++;
+                    }
+                }
 
 
 
