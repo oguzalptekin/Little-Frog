@@ -16,7 +16,7 @@ namespace Little_Frog
             int[] section = new int[7] { 0, 8, 17, 25, 34, 42, 50 };
             int[] carPlace = new int[6];
             bool carcoming = false;
-            string deleteThis;
+            //string deleteThis;
 
             //For determining car places on the road
             for (int i = 0; i <= 5; i++)
