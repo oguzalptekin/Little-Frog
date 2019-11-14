@@ -242,6 +242,8 @@ namespace Little_Frog
                     cursorx = cursorx + 2;
                 }
 
+
+                //Code that makes cars move
                 for (int i = 0; i <= 49; i++)
                 {
                     line1[i] = line1[i + 1];
@@ -264,7 +266,7 @@ namespace Little_Frog
                 }
 
 
-                //Carcounter
+                //Carcounter - Need Fix
                 carcounter = 0;
                 for (int i = 0; i <= 49; i++)
                 {
