@@ -57,7 +57,7 @@ namespace Little_Frog
                     {
                         //deleteThis = line1[50];
                         line1[50] = line1[i];
-                        //line1[i] = deleteThis;
+                        //line1[i] = deleteThis; //ilk baştaki değere göre sürekli 1 veya - üretilmesine neden oluyor!
                         line1[i] = line1[i + 1];
                     }
                     else
