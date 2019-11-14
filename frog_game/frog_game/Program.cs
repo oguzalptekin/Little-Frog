@@ -252,14 +252,14 @@ namespace Little_Frog
                     line2[i] = line2[i + 1];
                     
                 }
-                for (int i = 0; i <= 49; i++)
+                for (int i = 50; i >= 1; i--)
                 {
-                    line3[i] = line3[i + 1];
+                    line3[i] = line3[i - 1];
                     
                 }
-                for (int i = 0; i <= 49; i++)
+                for (int i = 50; i >= 1; i--)
                 {
-                    line4[i] = line4[i + 1];
+                    line4[i] = line4[i - 1];
                     
                 }
 
