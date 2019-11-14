@@ -17,10 +17,10 @@ namespace Little_Frog
             int counter = 0, level = 1, score = 0, life = 1; //require elements
             string direction = "";
             int car_type_2 = 2, car_type_1 = 1;
-            string[] line1 = new string[51];
-            string[] line2 = new string[51];
-            string[] line3 = new string[51];
-            string[] line4 = new string[51];
+            string[] line1 = new string[52];
+            string[] line2 = new string[52];
+            string[] line3 = new string[52];
+            string[] line4 = new string[52];
             Random rnd = new Random();
             int[] section = new int[7] { 0, 8, 17, 25, 34, 42, 50 };
             int[] carPlace = new int[6];
@@ -35,27 +35,102 @@ namespace Little_Frog
                 carPlace[i] = rnd.Next(section[i], section[i + 1]);
             }
 
-            ////Line creating loop
-            //for (int i = 0; i <= 50; i++)
-            //{
-            //    //Checks if there is a car on that line or not
-            //    for (int a = 0; a <= 5; a++)
-            //    {
-            //        //if there is a car on that point
-            //        if (i == carPlace[a] || (i - 1) == carPlace[a])
-            //        {
-            //            //Places the car
-            //            line1[i] = "1";
-            //        }
-            //    }
-            //    //if there isn't a car in that point
-            //    if (line1[i] == null)
-            //    {
-            //        //Places the road
-            //        line1[i] = "-";
-            //    }
-            //    Console.Write(line1[i]);
-            //}
+            //Line creating loop
+            for (int i = 0; i <= 51; i++)
+            {
+                //Checks if there is a car on that line or not
+                for (int a = 0; a <= 5; a++)
+                {
+                    //if there is a car on that point
+                    if (i == carPlace[a] || (i - 1) == carPlace[a])
+                    {
+                        //Places the car
+                        line1[i] = "1";
+                    }
+                }
+                //if there isn't a car in that point
+                if (line1[i] == null)
+                {
+                    //Places the road
+                    line1[i] = "-";
+                }
+                //Console.Write(line1[i]);
+            }
+            //For determining car places on the road
+            for (int i = 0; i <= 5; i++)
+            {
+                carPlace[i] = rnd.Next(section[i], section[i + 1]);
+            }
+            for (int i = 0; i <= 51; i++)
+            {
+                //Checks if there is a car on that line or not
+                for (int a = 0; a <= 5; a++)
+                {
+                    //if there is a car on that point
+                    if (i == carPlace[a] || (i - 1) == carPlace[a])
+                    {
+                        //Places the car
+                        line2[i] = "1";
+                    }
+                }
+                //if there isn't a car in that point
+                if (line2[i] == null)
+                {
+                    //Places the road
+                    line2[i] = "-";
+                }
+                //Console.Write(line1[i]);
+            }
+            //For determining car places on the road
+            for (int i = 0; i <= 5; i++)
+            {
+                carPlace[i] = rnd.Next(section[i], section[i + 1]);
+            }
+            for (int i = 0; i <= 51; i++)
+            {
+                //Checks if there is a car on that line or not
+                for (int a = 0; a <= 5; a++)
+                {
+                    //if there is a car on that point
+                    if (i == carPlace[a] || (i - 1) == carPlace[a])
+                    {
+                        //Places the car
+                        line3[i] = "1";
+                    }
+                }
+                //if there isn't a car in that point
+                if (line3[i] == null)
+                {
+                    //Places the road
+                    line3[i] = "-";
+                }
+                //Console.Write(line1[i]);
+            }
+            //For determining car places on the road
+            for (int i = 0; i <= 5; i++)
+            {
+                carPlace[i] = rnd.Next(section[i], section[i + 1]);
+            }
+            for (int i = 0; i <= 51; i++)
+            {
+                //Checks if there is a car on that line or not
+                for (int a = 0; a <= 5; a++)
+                {
+                    //if there is a car on that point
+                    if (i == carPlace[a] || (i - 1) == carPlace[a])
+                    {
+                        //Places the car
+                        line4[i] = "1";
+                    }
+                }
+                //if there isn't a car in that point
+                if (line4[i] == null)
+                {
+                    //Places the road
+                    line4[i] = "-";
+                }
+                //Console.Write(line1[i]);
+            }
 
             ////now its time for it to flow
             ////Pseudo solution
@@ -123,10 +198,10 @@ namespace Little_Frog
                 //Print Road
                 int cursorx = 3, cursory = 3;
 
-                for (int i = 3; i <= 54; i++)
+                for (int i = 0; i <= 49; i++)
                 {
                     Console.SetCursorPosition(cursorx, cursory);
-                    Console.WriteLine("--");
+                    Console.Write("--");
                     cursorx = cursorx + 2;
                 }
 
@@ -135,11 +210,31 @@ namespace Little_Frog
                 {
                     cursory = cursory + 2;
                     cursorx = 3;
-                    for (int i = 3; i <= 54; i++)
+                    for (int i = 0; i <= 51; i++)
                     {
-                        Console.SetCursorPosition(cursorx, cursory);
-                        Console.WriteLine(". ");
-                        cursorx = cursorx + 2;
+                        switch (a) 
+                        {
+                            case 1:
+                                Console.SetCursorPosition(cursorx, cursory);
+                                Console.WriteLine(line1[i]);
+                                cursorx = cursorx + 2;
+                                break;
+                            case 2:
+                                Console.SetCursorPosition(cursorx, cursory);
+                                Console.WriteLine(line2[i]);
+                                cursorx = cursorx + 2;
+                                break;
+                            case 3:
+                                Console.SetCursorPosition(cursorx, cursory);
+                                Console.WriteLine(line3[i]);
+                                cursorx = cursorx + 2;
+                                break;
+                            case 4:
+                                Console.SetCursorPosition(cursorx, cursory);
+                                Console.WriteLine(line4[i]);
+                                cursorx = cursorx + 2;
+                                break;
+                        }
                     }
                 }
                 cursory = cursory + 2;
