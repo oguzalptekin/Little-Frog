@@ -17,6 +17,13 @@ namespace Little_Frog
             int counter = 0, level = 1, score = 0, life = 1; //require elements
             string direction = "";
             int car_type_2 = 2, car_type_1 = 1;
+            string[] line1 = new string[51];
+            Random rnd = new Random();
+            int[] section = new int[7] { 0, 8, 17, 25, 34, 42, 50 };
+            int[] carPlace = new int[6];
+            bool carcoming = false;
+            Console.CursorVisible = false;
+            int carcounter;
 
 
             while (true)
