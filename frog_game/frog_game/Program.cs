@@ -54,7 +54,34 @@ namespace Little_Frog
             //    Console.Write(line1[i]);
             //}
 
-            while (true)
+            ////now its time for it to flow
+            ////Pseudo solution
+            //while (carcoming == false)
+            //{
+            //    Console.Clear();
+            //    for (int i = 0; i <= 49; i++)
+            //    {
+            //        line1[i] = line1[i + 1];
+            //        Console.Write(line1[i]);
+            //    }
+
+
+            //    //Carcounter
+            //    carcounter = 0;
+            //    for (int i = 0; i <= 49; i++)
+            //    {
+            //        if (line1[i] == "1" && line1[i + 1] == "1" || line1[i] == "2" && line1[i + 1] == "2")
+            //        {
+            //            carcounter--;
+            //        }
+            //        else if (line1[i] == "1" && line1[i + 1] == "-" || line1[i] == "2" && line1[i + 1] == "-")
+            //        {
+            //            carcounter += 2;
+            //        }
+            //    }
+            //}
+
+                while (true)
             {
                 Console.SetCursorPosition(1, 1);
                 Console.WriteLine("Time: " + counter);
