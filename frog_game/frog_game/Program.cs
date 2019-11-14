@@ -32,6 +32,28 @@ namespace Little_Frog
                 carPlace[i] = rnd.Next(section[i], section[i + 1]);
             }
 
+            ////Line creating loop
+            //for (int i = 0; i <= 50; i++)
+            //{
+            //    //Checks if there is a car on that line or not
+            //    for (int a = 0; a <= 5; a++)
+            //    {
+            //        //if there is a car on that point
+            //        if (i == carPlace[a] || (i - 1) == carPlace[a])
+            //        {
+            //            //Places the car
+            //            line1[i] = "1";
+            //        }
+            //    }
+            //    //if there isn't a car in that point
+            //    if (line1[i] == null)
+            //    {
+            //        //Places the road
+            //        line1[i] = "-";
+            //    }
+            //    Console.Write(line1[i]);
+            //}
+
             while (true)
             {
                 Console.SetCursorPosition(1, 1);
