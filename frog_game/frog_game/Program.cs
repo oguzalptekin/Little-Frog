@@ -58,6 +58,8 @@ namespace Little_Frog
                     Console.Write(line1[i]);
                 }
 
+
+                //Carcounter
                 carcounter = 0;
                 for(int i = 0; i <= 49; i++)
                 {
