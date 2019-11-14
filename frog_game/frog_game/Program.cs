@@ -18,6 +18,9 @@ namespace Little_Frog
             string direction = "";
             int car_type_2 = 2, car_type_1 = 1;
             string[] line1 = new string[51];
+            string[] line2 = new string[51];
+            string[] line3 = new string[51];
+            string[] line4 = new string[51];
             Random rnd = new Random();
             int[] section = new int[7] { 0, 8, 17, 25, 34, 42, 50 };
             int[] carPlace = new int[6];
@@ -81,7 +84,7 @@ namespace Little_Frog
             //    }
             //}
 
-                while (true)
+            while (true)
             {
                 Console.SetCursorPosition(1, 1);
                 Console.WriteLine("Time: " + counter);
