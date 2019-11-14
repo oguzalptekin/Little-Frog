@@ -55,9 +55,10 @@ namespace Little_Frog
                 {
                     if (i == 0)
                     {
-                        deleteThis = line1[50];
+                        //deleteThis = line1[50];
                         line1[50] = line1[i];
-                        line1[i] = deleteThis;
+                        //line1[i] = deleteThis;
+                        line1[i] = line1[i + 1];
                     }
                     else
                     {
