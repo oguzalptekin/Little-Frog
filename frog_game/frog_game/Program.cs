@@ -16,13 +16,17 @@ namespace Little_Frog
             ConsoleKeyInfo cki;
             int counter = 0, level = 1, score = 0, life = 1; //require elements
             string direction = "";
-            int car_type_2 = 2, car_type_1 = 1;
+            int car_type_1 = 1, car_type_2 = 2;
+            int car_1 = 10, car_2 = 2; //car variables
             string[] line1 = new string[52];
             string[] line2 = new string[52];
             string[] line3 = new string[52];
             string[] line4 = new string[52];
             Random rnd = new Random();
             int[] section = new int[7] { 0, 8, 17, 25, 34, 42, 50 };
+            int[] car_type = new int[] { 1, 2 };
+            int[] car_length = new int[] { 2, 3, 4 };
+            int car_length_rnd = rnd.Next(0, car_length.Length);
             int[] carPlace = new int[6];
             bool carcoming = false;
             Console.CursorVisible = false;
@@ -157,6 +161,32 @@ namespace Little_Frog
 
             while (true)
             {
+                //LEVEL PART -NOT FINISHED-
+
+                bool flag_level = true;
+                
+                if (frogy ==3)
+                {
+                    frogx = 53;
+                    frogy = 13;
+                    level += 1;
+                    if (level > 6)
+                    {
+                        flag_level = false;
+                    }
+                    car_1 -= 2;
+                    car_2 += 2;
+                    if (counter > 60)
+                    {
+                        score = score + 0;
+                    }
+                    else
+                    {
+                        score = score + (60 - counter);
+                    }
+                }
+
+
                 Console.SetCursorPosition(1, 1);
                 Console.WriteLine("Time: " + counter);
                 Console.SetCursorPosition(12, 1);
@@ -320,18 +350,36 @@ namespace Little_Frog
                     }
                     if (cki.Key == ConsoleKey.Escape)
                         break;
-
-                    while (Console.KeyAvailable)
-                    {
-                        cki = Console.ReadKey();
-                    }
-
-
                 }
+
+
+
+                
+
+
+
+
+
+
+
+                if (flag_level == false)
+                {
+                    Console.Clear();
+                    break;
+                    
+                }
+
                 Thread.Sleep(500);
 
 
             }
+
+            Console.SetCursorPosition(55, 11);
+            Console.WriteLine("GAME OVER");
+            Console.SetCursorPosition(52, 13);
+            Console.WriteLine("Your Score: "+score);
+
+
             Console.ReadLine();
         }
     }
