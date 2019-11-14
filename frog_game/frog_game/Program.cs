@@ -194,7 +194,7 @@ namespace Little_Frog
                 //Print Road
                 int cursorx = 3, cursory = 3;
 
-                for (int i = 0; i <= 49; i++)
+                for (int i = 3; i <= 54; i++)
                 {
                     Console.SetCursorPosition(cursorx, cursory);
                     Console.Write("--");
@@ -240,6 +240,38 @@ namespace Little_Frog
                     Console.SetCursorPosition(cursorx, cursory);
                     Console.WriteLine("--");
                     cursorx = cursorx + 2;
+                }
+
+                for (int i = 0; i <= 49; i++)
+                {
+                    line1[i] = line1[i + 1];
+                    
+                }
+                for (int i = 0; i <= 49; i++)
+                {
+                    line2[i] = line2[i + 1];
+                    
+                }
+                for (int i = 0; i <= 49; i++)
+                {
+                    line3[i] = line3[i + 1];
+                    
+                }
+                for (int i = 0; i <= 49; i++)
+                {
+                    line4[i] = line4[i + 1];
+                    
+                }
+
+
+                //Carcounter
+                carcounter = 0;
+                for (int i = 0; i <= 49; i++)
+                {
+                    if (line1[i] == "1" && line1[i + 1] == "-" || line1[i] == "2" && line1[i + 1] == "-")
+                    {
+                        carcounter++;
+                    }
                 }
 
                 //Frog Movement
