@@ -171,10 +171,10 @@ namespace Little_Frog
                 //LEVEL PART -NOT FINISHED-
 
                 bool flag_level = true;
-                
-                if (frogy ==3)
+
+                if (frogy == 3)
                 {
-                    
+
                     frogx = 53;
                     frogy = 13;
                     level += 1;
@@ -247,7 +247,7 @@ namespace Little_Frog
                     cursorx = 3;
                     for (int i = 0; i <= 51; i++)
                     {
-                        switch (a) 
+                        switch (a)
                         {
                             case 1:
                                 Console.SetCursorPosition(cursorx, cursory);
@@ -286,22 +286,22 @@ namespace Little_Frog
                 for (int i = 0; i <= 49; i++)
                 {
                     line1[i] = line1[i + 1];
-                    
+
                 }
                 for (int i = 0; i <= 49; i++)
                 {
                     line2[i] = line2[i + 1];
-                    
+
                 }
                 for (int i = 50; i >= 1; i--)
                 {
                     line3[i] = line3[i - 1];
-                    
+
                 }
                 for (int i = 50; i >= 1; i--)
                 {
                     line4[i] = line4[i - 1];
-                    
+
                 }
 
 
@@ -359,25 +359,15 @@ namespace Little_Frog
                     }
                     if (cki.Key == ConsoleKey.Escape)
                         break;
-                }
-
-
-
+                    
                     while (Console.KeyAvailable)
                     {
                         cki = Console.ReadKey();
                     }
                 }
+                Thread.Sleep(500);
+            }
                 Thread.Sleep(150);
-
-
-                
-
-
-
-
-
-
 
                 if (flag_level == false)
                 {
@@ -386,11 +376,6 @@ namespace Little_Frog
                     
                 }
 
-                Thread.Sleep(500);
-
-
-            }
-
             Console.SetCursorPosition(55, 11);
             Console.WriteLine("GAME OVER");
             Console.SetCursorPosition(52, 13);
@@ -398,7 +383,7 @@ namespace Little_Frog
 
 
             Console.ReadLine();
-            
+     
         }
     }
 }
