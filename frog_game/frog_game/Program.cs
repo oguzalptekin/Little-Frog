@@ -365,16 +365,16 @@ namespace Little_Frog
                         cki = Console.ReadKey();
                     }
                 }
-                Thread.Sleep(500);
-            }
-                Thread.Sleep(150);
 
                 if (flag_level == false)
                 {
                     Console.Clear();
                     break;
-                    
                 }
+                Thread.Sleep(500);
+            }
+                Thread.Sleep(150);
+                    
 
             Console.SetCursorPosition(55, 11);
             Console.WriteLine("GAME OVER");
