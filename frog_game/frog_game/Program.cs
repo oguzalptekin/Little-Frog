@@ -10,6 +10,7 @@ namespace Homework1
     {
         static void Main(string[] args)
         {
+<<<<<<< Updated upstream
 
 
             while (true)
@@ -558,6 +559,24 @@ namespace Homework1
 
             Console.ReadLine();
      
+=======
+            int time = 0;
+            int life = 1;
+            int sayac = 1;
+            int score = 0;
+            int scoretotal = 0;
+            while ( life >0 )
+            {
+                while (sayac<=6)
+                {
+                    score = 60 - time;
+                    scoretotal = scoretotal + score;
+                    sayac++;
+                }
+            }
+            Console.WriteLine("SCORE: {0}", scoretotal);
+            
+>>>>>>> Stashed changes
         }
     }
 }
