@@ -107,8 +107,58 @@ namespace Homework1
                         }
                         //Console.Write(line1[i]);
                     }
+
                     //For determining car places on the road
                     for (int i = 0; i <= 5; i++)
+
+                }
+                //if there isn't a car in that point
+                if (line4[i] == null)
+                {
+                    //Places the road
+                    line4[i] = "-";
+                }
+                //Console.Write(line1[i]);
+            }
+
+            ////now its time for it to flow
+            ////Pseudo solution
+            //while (carcoming == false)
+            //{
+            //    Console.Clear();
+            //    for (int i = 0; i <= 49; i++)
+            //    {
+            //        line1[i] = line1[i + 1];
+            //        Console.Write(line1[i]);
+            //    }
+
+
+            //    //Carcounter
+            //    carcounter = 0;
+            //    for (int i = 0; i <= 49; i++)
+            //    {
+            //        if (line1[i] == "1" && line1[i + 1] == "-" || line1[i] == "2" && line1[i + 1] == "-")
+            //        {
+            //            carcounter++;
+            //        }
+            //    }
+            //}
+
+
+            while (true)
+            {
+                //LEVEL PART -NOT FINISHED-
+
+                bool flag_level = true;
+
+                if (frogy == 3)
+                {
+
+                    frogx = 53;
+                    frogy = 13;
+                    level += 1;
+                    if (level > 6)
+
                     {
                         carPlace[i] = rnd.Next(section[i], section[i + 1]);
                     }
@@ -244,18 +294,24 @@ namespace Homework1
 
 
 
-
-
                         //Print Road
                         int cursorx = 3, cursory = 3;
 
                         for (int i = 3; i <= 54; i++)
+
+                for (int a = 1; a <= 4; a++)
+                {
+                    cursory = cursory + 2;
+                    cursorx = 3;
+                    for (int i = 0; i <= 51; i++)
+                    {
+                        switch (a)
+
                         {
                             Console.SetCursorPosition(cursorx, cursory);
                             Console.Write("--");
                             cursorx = cursorx + 2;
                         }
-
 
                         for (int a = 1; a <= 4; a++)
                         {
@@ -297,6 +353,30 @@ namespace Homework1
                             cursorx = cursorx + 2;
                         }
 
+                //Code that makes cars move
+                for (int i = 0; i <= 49; i++)
+                {
+                    line1[i] = line1[i + 1];
+
+                }
+                for (int i = 0; i <= 49; i++)
+                {
+                    line2[i] = line2[i + 1];
+
+                }
+                for (int i = 50; i >= 1; i--)
+                {
+                    line3[i] = line3[i - 1];
+
+                }
+                for (int i = 50; i >= 1; i--)
+                {
+                    line4[i] = line4[i - 1];
+
+                }
+
+
+
 
                         //Code that makes cars move
                         for (int i = 0; i <= 49; i++)
@@ -317,6 +397,7 @@ namespace Homework1
                         for (int i = 50; i >= 1; i--)
                         {
                             line4[i] = line4[i - 1];
+
 
                         }
 
@@ -414,9 +495,28 @@ namespace Homework1
                         "the  type of the vehicle depends on the rules of the played level.");
                     Console.ReadLine();
 
+                    if (cki.Key == ConsoleKey.DownArrow && frogy < 12)
+                    {
+                        Console.SetCursorPosition(frogx, frogy);
+                        Console.WriteLine("");
+                        frogy += 2;
+                        counter++;
+                        direction = "Down  ";
+                    }
+                    if (cki.Key == ConsoleKey.Escape)
+                        break;
+                    
+                    while (Console.KeyAvailable)
+                    {
+                        cki = Console.ReadKey();
+                    }
+                }
+
+
                 }
                 else if (opt == 3)
                 {
+
                     while (true)
                     {
                         Console.WriteLine("Are you sure you want to exit :( ?\n\nYES(press 1)      NO(press 2)");
@@ -445,5 +545,20 @@ namespace Homework1
 
 
 
+                    Console.Clear();
+                    break;
+                }
+                Thread.Sleep(500);
+            }
+                Thread.Sleep(150);
+                    
 
+
+
+
+            Console.ReadLine();
+     
+        }
+    }
+}
 
