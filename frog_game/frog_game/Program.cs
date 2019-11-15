@@ -23,7 +23,7 @@ namespace Little_Frog
             string[] line3 = new string[52];
             string[] line4 = new string[52];
             Random rnd = new Random();
-            int[] section = new int[7] { 0, 8, 17, 25, 34, 42, 50 };
+            int[] section = new int[7] { 1, 8, 17, 25, 34, 42, 49};
             int[] car_type = new int[] { 1, 2 };
             int[] car_length = new int[] { 2, 3, 4 };
             int car_length_rnd = rnd.Next(0, car_length.Length);
@@ -167,6 +167,7 @@ namespace Little_Frog
                 
                 if (frogy ==3)
                 {
+                    
                     frogx = 53;
                     frogy = 13;
                     level += 1;
@@ -184,6 +185,7 @@ namespace Little_Frog
                     {
                         score = score + (60 - counter);
                     }
+                    Thread.Sleep(500);
                 }
 
 
